@@ -8,8 +8,10 @@ import {
   IconButton,
   Typography,
   createTheme,
+  CardMedia,
   ThemeProvider,
 } from "@mui/material";
+import card1 from "../../assets/images/HeaderLogo.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -17,11 +19,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 function DrawerComp() {
   const [openDrawer, setOpenDrawer] = useState(false);
   const Pages = [
-    { label: "The Family", path: "/Family" },
-    { label: "#TheChallenge", path: "/TheChallenge" },
     { label: "Home", path: "/" },
-    { label: "Order Now", path: "/order-now" },
-    { label: "Contact Us", path: "/contact-us" },
+    { label: "About Us", path: "/AboutUs" },
+    { label: "Products", path: "/Products" },
+    { label: "Contact Us", path: "/contact" }, 
   ];
   const theme = createTheme({
     typography: {
@@ -33,20 +34,18 @@ function DrawerComp() {
   return (
     <>
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
-        <Box sx={{ height: "100%", backgroundColor: "#fff5e7" }}>
-          <ThemeProvider theme={theme}>
-            <Typography
-              sx={{
-                backgroundColor: "#ffcf3d",
-                padding: "10px",
-                textAlign: "center",
-                fontSize: "1.9rem",
-                color: "#d90101",
-              }}
-            >
-              Jonah's Kobab
-            </Typography>
-          </ThemeProvider>
+        <Box sx={{ height: "100%", backgroundColor: "#1c2123" }}>
+            <Box sx={{
+              padding: "5% 5% 5% 14%",
+              width: "150px", 
+            }}> 
+              <CardMedia 
+              component="img"
+              height="80px" 
+              image={card1} 
+              />
+             </Box>
+          {/* </ThemeProvider> */}
           <List sx={{ textTransform: "uppercase" }}>
             {Pages.map((page, index) => (
               <ListItemButton

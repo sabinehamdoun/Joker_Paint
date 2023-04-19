@@ -41,20 +41,16 @@ export default function NavBar() {
         {isMatch ? (
           <>
             <DrawerComp />
-            {/* <ThemeProvider theme={theme}> */}
-              <Typography
-                sx={{
-                  color: "#d91010",
-                  paddingLeft: "10px",
-                  fontSize: "2rem",
-                  marginRight: "30px",
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                }}
-              >
-                Jonah's Kabob
-              </Typography>
-            {/* </ThemeProvider> */}
+            <Box sx={{
+              padding: "1% 0 1%"
+            }}> 
+              <CardMedia 
+              component="img"
+              height="65px"
+              width="70px"
+              image={card1} 
+              />
+             </Box>
           </>
         ) : (
           <>
