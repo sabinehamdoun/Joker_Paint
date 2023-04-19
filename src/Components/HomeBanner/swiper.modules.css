@@ -1,25 +1,26 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 50%;
+  top: 50% !important;
   /* transform: translateY(-50%); */
-  width: 50px;
-  height: 50px;
+  width: 50px !important;
+  height: 50px !important;
   border-radius: 5%;
-  background-color: #333;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  color: #fff;
-  font-size: 18px;
+  background-color: #1c2123 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+  color: #fff !important;
+  font-size: 18px !important;
   text-align: center;
   line-height: 30px;
-  cursor: pointer;
-  z-index: 10;
+  cursor: pointer !important;
+  z-index: 10 !important;
+  font-weight: 800;
 }
 
 .swiper-button-prev {
-  /* left: 20px; */
+  left: 20px;
 }
 
 .swiper-button-next {
-  /* right: 20px; */
+  right: 20px;
 }

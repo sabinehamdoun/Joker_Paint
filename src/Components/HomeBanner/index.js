@@ -29,19 +29,17 @@ export default function HomeBanner() {
       <Swiper
         spaceBetween={5}
         slidesPerView={1}
-        onSlideChange={() => console.log('slide change')}
+        // onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
         modules={[Navigation, Pagination, Controller, Autoplay]}
         controller={{ control: controlledSwiper }}
-        navigation={{
-          prevEl: '.swiper-button-prev',
-          nextEl: '.swiper-button-next',
+        navigation={{ 
           clickable: true
         }}
-        // pagination={{
-        //     // el: '.swiper-pagination',
-        //     clickable: true,
-        // }}
+        pagination={{
+            // el: '.swiper-pagination',
+            clickable: true,
+        }}
         autoplay={{ delay: 3000 }}
       >
         <SwiperSlide>
@@ -79,10 +77,7 @@ export default function HomeBanner() {
             image={home4}
             onLoad={handleImageLoad}
           />
-        </SwiperSlide>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
-        {/* //   <div className="swiper-pagination"></div>  */}
+        </SwiperSlide> 
       </Swiper>
     </Box>
   );

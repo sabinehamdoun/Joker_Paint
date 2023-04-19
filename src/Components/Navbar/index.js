@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import DrawerComp from "../Drawer"; 
 import card1 from "../../assets/images/HeaderLogo.svg";
+import { useNavigate } from 'react-router-dom';
 
 export default function NavBar() {
 
@@ -21,6 +22,16 @@ export default function NavBar() {
           color: "#FFCC00",
         },
       });
+
+      const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
+    
+    
+    const navigate = useNavigate();
 
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -68,7 +79,10 @@ export default function NavBar() {
               }}
             >
               <Button
-                // onClick={() => navigate("/Family")}
+                onClick={() => {
+                  navigate("/");
+                  scrollToTop();
+                }}
                 sx={{
                 //   marginRight: { md: "-20px", lg: "40px" },
                 marginLeft: "23px",
@@ -131,7 +145,10 @@ export default function NavBar() {
                 Products
               </Button>
               <Button
-                // onClick={() => navigate("/contact-us")}
+                onClick={() => {
+                  navigate("/contact");
+                  scrollToTop();
+                }}
                 sx={{
                   marginRight: "20px",
                   marginLeft: "30px",
